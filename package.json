@@ -1,0 +1,42 @@
+{
+  "name": "ai-prompt-generator",
+  "version": "1.0.0",
+  "description": "A modern AI prompt generator website that creates intelligent prompts based on user topics",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "python -m http.server 8000",
+    "serve": "python -m http.server 8000"
+  },
+  "keywords": [
+    "ai",
+    "prompt",
+    "generator",
+    "website",
+    "creative-writing",
+    "business",
+    "coding",
+    "art",
+    "marketing"
+  ],
+  "author": "AI Prompt Generator Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/ai-prompt-generator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/ai-prompt-generator/issues"
+  },
+  "homepage": "https://github.com/yourusername/ai-prompt-generator#readme",
+  "devDependencies": {},
+  "dependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

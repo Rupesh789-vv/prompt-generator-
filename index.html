@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Prompt Generator - Get Perfect Prompts for Any Topic</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Floating Background Shapes -->
+    <div class="floating-shapes">
+        <div class="floating-shape"></div>
+        <div class="floating-shape"></div>
+        <div class="floating-shape"></div>
+        <div class="floating-shape"></div>
+    </div>
+    
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <div class="ai-logo-3d">
+                    <div class="ai-robot">
+                        <!-- Robot Head -->
+                        <div class="robot-head">
+                            <div class="robot-eye left"></div>
+                            <div class="robot-eye right"></div>
+                            <div class="robot-mouth"></div>
+                        </div>
+                        <!-- Robot Body -->
+                        <div class="robot-body">
+                            <div class="robot-chest"></div>
+                            <div class="robot-arm left"></div>
+                            <div class="robot-arm right"></div>
+                        </div>
+                        <!-- Robot Legs -->
+                        <div class="robot-legs">
+                            <div class="robot-leg left"></div>
+                            <div class="robot-leg right"></div>
+                        </div>
+                    </div>
+                </div>
+                <h1>AI Prompt Generator</h1>
+            </div>
+            <p class="tagline">Transform your ideas into powerful AI prompts</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Input Section -->
+            <section class="input-section">
+                <div class="input-container">
+                    <label for="topic-input" class="input-label">
+                        <i class="fas fa-lightbulb"></i>
+                        What topic would you like a prompt for?
+                    </label>
+                    <div class="input-wrapper">
+                        <input 
+                            type="text" 
+                            id="topic-input" 
+                            placeholder="e.g., creative writing, business strategy, coding help, art generation..."
+                            class="topic-input"
+                        >
+                        <button id="generate-btn" class="generate-btn">
+                            <i class="fas fa-magic"></i>
+                            Generate Prompt
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Prompt Categories -->
+            <section class="categories-section">
+                <h3>Popular Topics</h3>
+                                 <div class="category-tags">
+                     <button class="category-tag" data-topic="creative writing">Creative Writing</button>
+                     <button class="category-tag" data-topic="business strategy">Business Strategy</button>
+                     <button class="category-tag" data-topic="art generation">Art Generation</button>
+                     <button class="category-tag" data-topic="marketing copy">Marketing Copy</button>
+                     <button class="category-tag" data-topic="academic research">Academic Research</button>
+                     <button class="category-tag" data-topic="social media">Social Media</button>
+                     <button class="category-tag" data-topic="product description">Product Description</button>
+                     <button class="category-tag" data-topic="storytelling">Storytelling</button>
+                     <button class="category-tag" data-topic="poetry writing">Poetry Writing</button>
+                     <button class="category-tag" data-topic="content creation">Content Creation</button>
+                     <button class="category-tag" data-topic="email marketing">Email Marketing</button>
+                     <button class="category-tag" data-topic="brand voice">Brand Voice</button>
+                     <button class="category-tag" data-topic="advertising copy">Advertising Copy</button>
+                     <button class="category-tag" data-topic="blog writing">Blog Writing</button>
+                     <button class="category-tag" data-topic="video scripts">Video Scripts</button>
+                     <button class="category-tag" data-topic="presentation content">Presentation Content</button>
+                 </div>
+            </section>
+
+            <!-- Results Section -->
+            <section class="results-section" id="results-section" style="display: none;">
+                <div class="result-header">
+                    <h3>Generated Prompt</h3>
+                    <button id="copy-btn" class="copy-btn">
+                        <i class="fas fa-copy"></i>
+                        Copy
+                    </button>
+                </div>
+                <div class="prompt-display" id="prompt-display">
+                    <span class="quote-start">"</span>
+                    <span class="quote-end">"</span>
+                    <!-- Generated prompt will appear here -->
+                </div>
+                <div class="prompt-actions">
+                    <button id="regenerate-btn" class="regenerate-btn">
+                        <i class="fas fa-redo"></i>
+                        Regenerate
+                    </button>
+                    <button id="save-btn" class="save-btn">
+                        <i class="fas fa-bookmark"></i>
+                        Save
+                    </button>
+                </div>
+            </section>
+
+            <!-- Saved Prompts -->
+            <section class="saved-section" id="saved-section" style="display: none;">
+                <h3>Saved Prompts</h3>
+                <div class="saved-prompts" id="saved-prompts">
+                    <!-- Saved prompts will appear here -->
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 AI Prompt Generator. Built with ❤️ for creators.</p>
+        </footer>
+    </div>
+
+    <!-- Loading Modal -->
+    <div class="loading-modal" id="loading-modal">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <p>Generating your perfect prompt...</p>
+        </div>
+    </div>
+
+    <!-- Success Toast -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toast-message">Prompt copied to clipboard!</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
